@@ -1,0 +1,14 @@
+<div class="d-flex justify-content-between align-items-center">
+  <h1>New flat</h1>
+  <%= link_to "◀︎ back to flats", flats_path, class: "btn btn-outline-secondary btn-sm rounded-pill" %>
+</div>
+<%= simple_form_for @flat do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :address %>
+  <%= f.input :city %>
+  <%= f.input :country, as: :string %>
+  <%= f.input :price_per_night, as: :float %>
+  <%= f.input :number_of_guests, as: :integer %>
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>
